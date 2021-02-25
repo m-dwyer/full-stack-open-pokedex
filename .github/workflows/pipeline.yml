@@ -41,7 +41,8 @@ jobs:
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
       - uses: actions/checkout@v2
-        with: fetch-depth: '0'
+        with:
+          fetch-depth: '0'
       - name: Bump version and push tag
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.33.0
